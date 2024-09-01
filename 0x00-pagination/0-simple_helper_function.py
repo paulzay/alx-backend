@@ -3,7 +3,6 @@
 from typing import Tuple
 
 
-
 def index_range(page, page_size) -> Tuple[int, int]:
     """return tuple of indices"""
     start_index = (page - 1) * page_size
