@@ -40,7 +40,7 @@ class Server:
         start, end = index_range(page, page_size)
         return self.dataset()[start:end]
 
-    def get_hyper(self):
+    def get_hyper(self) -> dict:
         """Get hypermedia pagination"""
         data = self.get_page()
         page = 1
