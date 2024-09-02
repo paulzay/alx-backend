@@ -3,6 +3,7 @@
 
 import csv
 from typing import List
+import math
 
 
 def index_range(page: int, page_size: int) -> tuple:
@@ -40,18 +41,14 @@ class Server:
         start, end = index_range(page, page_size)
         return self.dataset()[start:end]
 
-    def get_hyper(self) -> dict:
+    def get_hyper(self, page: int = 1, page_size: int = 10) -> dict:
         """Get hypermedia pagination"""
-        data = self.get_page()
-        page = 1
-        page_size = 10
+        data = self.get_page(page, page_size)
+        total_pages = math.ceil(len(self.dataset()) / page_size)
+        next_page = page + 1 if page < total_pages else None
+        prev_page = page - 1 if page > 1 else None
         page_size = len(data)
-        page = len(self.dataset()) // page_size
-        if len(self.dataset()) % page_size:
-            page += 1
-        next_page = page + 1
-        prev_page = page - 1
-        total_pages = page
+
         return {
                 "page_size": page_size,
                 "page": page,
@@ -59,4 +56,4 @@ class Server:
                 "next_page": next_page,
                 "prev_page": prev_page,
                 "total_pages": total_pages
-                }
+            }
