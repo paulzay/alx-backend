@@ -52,7 +52,7 @@ class Server:
         next_page = page + 1
         prev_page = page - 1
         total_pages = page
-        my_dict = {
+        return {
                 "page_size": page_size,
                 "page": page,
                 "data": data,
@@ -60,4 +60,3 @@ class Server:
                 "prev_page": prev_page,
                 "total_pages": total_pages
                 }
-        return my_dict
