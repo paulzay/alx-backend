@@ -22,7 +22,6 @@ class FIFOCache(BaseCaching):
                 self.cache_data.pop(delete)
                 print('DISCARD: {}'.format(delete))
 
-
     def get(self, key):
         """ get data """
         return self.cache_data.get(key)
