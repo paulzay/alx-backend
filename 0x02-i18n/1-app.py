@@ -7,11 +7,10 @@ app = Flask(__name__)
 
 
 class Config:
-    def __init__(self) -> None:
-        """ config class """
-        LANGUAGES = ['en', 'fr']
-        BABEL_DEFAULT_LOCALE = 'en'
-        BABEL_DEFAULT_TIMEZONE = 'UTC'
+    """ config class """
+    LANGUAGES = ['en', 'fr']
+    BABEL_DEFAULT_LOCALE = 'en'
+    BABEL_DEFAULT_TIMEZONE = 'UTC'
 
 
 app.config.from_object(Config)
