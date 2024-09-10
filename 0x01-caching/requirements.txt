@@ -1,0 +1,8 @@
+certifi @ file:///private/tmp/certifi-20240307-4874-p3lgkm/certifi-2024.2.2
+charset-normalizer @ file:///private/tmp/python-charset-normalizer-20231123-5225-x00973/charset-normalizer-3.3.2
+gpg==1.23.2
+idna @ file:///private/tmp/python-idna-20231125-5279-xtqzsf/idna-3.6
+pywatchman==2.0.0
+requests @ file:///private/tmp/python-requests-20231124-5682-96f89l/requests-2.31.0
+urllib3 @ file:///private/tmp/python-urllib3-20240218-4962-2z5xut/urllib3-2.2.1
+wheel @ file:///opt/homebrew/Cellar/python%403.12/3.12.4/libexec/wheel-0.43.0-py3-none-any.whl#sha256=ff23205a590f2b902a2a21151019e96b93ab4a1409d7c9748b6bd210f4c0f44d
